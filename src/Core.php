@@ -1,6 +1,6 @@
 <?php
 
-namespace SlickPay;
+namespace ExtendedSlickPay;
 
 /**
  * Core

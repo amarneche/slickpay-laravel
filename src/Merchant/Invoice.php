@@ -1,6 +1,6 @@
 <?php
 
-namespace SlickPay\Merchant;
+namespace ExtendedSlickPay\Merchant;
 
 use SlickPay\Core;
 

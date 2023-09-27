@@ -1,6 +1,7 @@
 {
     "name": "amarneche/slickpay-laravel",
-    "description": "Laravel package for Slick-Pay API implementation",
+    "description": "Forked version of Slick-Pay Laravel package with improvements.",
+
     "license": "MIT",
     "authors": [
         {
@@ -10,13 +11,15 @@
         {
             "name": "Azimut BS",
             "email": "contact@azimutbs.com"
+        },
+        {
+            "name": "Amar Neche",
+            "email": "contact@amarneche.me"
         }
     ],
     "autoload": {
         "psr-4": {
-            "SlickPay\\": "src/",
-            "SlickPay\\User\\": "src/User",
-            "SlickPay\\Merchant\\": "src/Merchant"
+            "ExtendedSlickPay\\": "src/"
         }
     },
     "require": {
@@ -25,10 +28,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "SlickPay\\ApiServiceProvider"
+                "ExtendedSlickPay\\ApiServiceProvider"
             ]
         }
     },
     "minimum-stability": "dev",
-    "prefer-stable": false
+    "prefer-stable": true
 }

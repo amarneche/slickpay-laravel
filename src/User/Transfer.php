@@ -1,6 +1,6 @@
 <?php
 
-namespace SlickPay\User;
+namespace ExtendedSlickPay\User;
 
 use SlickPay\Core;
 

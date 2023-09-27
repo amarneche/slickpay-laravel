@@ -24,11 +24,15 @@ class Core
 
         if (!empty($error)) return $error;
 
+        $response = null;
+        $status = 500; 
+        $errors = [];
+
         try {
             $cURL = curl_init();
-
+            $postData =http_build_query ($amount);
             curl_setopt($cURL, CURLOPT_URL, Core::url($url));
-            curl_setopt($cURL, CURLOPT_POSTFIELDS, $amount);
+            curl_setopt($cURL, CURLOPT_POSTFIELDS, $postData);
             curl_setopt($cURL, CURLOPT_HTTPHEADER, array(
                 "Accept: application/json",
                 "Authorization: Bearer {$public_key}",
@@ -73,12 +77,18 @@ class Core
 
         if (!empty($error)) return $error;
 
+   
+        $response = null;
+        $status = 500; 
+        $errors = [];
+
         try {
+            $postData =http_build_query ($data);
 
             $cURL = curl_init();
 
             curl_setopt($cURL, CURLOPT_URL, self::url($url));
-            curl_setopt($cURL, CURLOPT_POSTFIELDS, $data);
+            curl_setopt($cURL, CURLOPT_POSTFIELDS, $postData);
             curl_setopt($cURL, CURLOPT_HTTPHEADER, array(
                 "Accept: application/json",
                 "Authorization: Bearer {$public_key}",
@@ -122,6 +132,10 @@ class Core
         $error = self::validate();
 
         if (!empty($error)) return $error;
+
+        $response = null;
+        $status = 500; 
+        $errors = [];
 
         try {
 
@@ -172,6 +186,10 @@ class Core
         $error = self::validate();
 
         if (!empty($error)) return $error;
+
+        $response = null;
+        $status = 500; 
+        $errors = [];
 
         try {
 
@@ -228,12 +246,17 @@ class Core
 
         if (!empty($error)) return $error;
 
+        $response = null;
+        $status = 500; 
+        $errors = [];
+
         try {
+            $postData =http_build_query ($data);
 
             $cURL = curl_init();
 
             curl_setopt($cURL, CURLOPT_URL, self::url("{$url}/{$id}"));
-            curl_setopt($cURL, CURLOPT_POSTFIELDS, $data);
+            curl_setopt($cURL, CURLOPT_POSTFIELDS, $postData);
             curl_setopt($cURL, CURLOPT_HTTPHEADER, array(
                 "Accept: application/json",
                 "Authorization: Bearer {$public_key}",
@@ -277,6 +300,10 @@ class Core
         $error = self::validate();
 
         if (!empty($error)) return $error;
+
+        $response = null;
+        $status = 500; 
+        $errors = [];
 
         try {
 

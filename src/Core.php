@@ -18,7 +18,7 @@ class Core
      */
     public static function commission(string $url, array $amount): array
     {
-        $public_key = config('slickpay.public_key', null);
+        $public_key = config('extended_slickpay.public_key', null);
 
         $error = Core::validate();
 
@@ -67,7 +67,7 @@ class Core
      */
     public static function store(string $url, array $data): array
     {
-        $public_key = config('slickpay.public_key', null);
+        $public_key = config('extended_slickpay.public_key', null);
 
         $error = self::validate();
 
@@ -117,7 +117,7 @@ class Core
      */
     public static function show(string $url, int $id): array
     {
-        $public_key = config('slickpay.public_key', null);
+        $public_key = config('extended_slickpay.public_key', null);
 
         $error = self::validate();
 
@@ -167,7 +167,7 @@ class Core
      */
     public static function index(string $url, int $offset = 0, int $page = 1): array
     {
-        $public_key = config('slickpay.public_key', null);
+        $public_key = config('extended_slickpay.public_key', null);
 
         $error = self::validate();
 
@@ -222,7 +222,7 @@ class Core
      */
     public static function update(string $url, int $id, array $data): array
     {
-        $public_key = config('slickpay.public_key', null);
+        $public_key = config('extended_slickpay.public_key', null);
 
         $error = self::validate();
 
@@ -272,7 +272,7 @@ class Core
      */
     public static function destroy(string $url, int $id): array
     {
-        $public_key = config('slickpay.public_key', null);
+        $public_key = config('extended_slickpay.public_key', null);
 
         $error = self::validate();
 
@@ -321,7 +321,7 @@ class Core
      */
     public static function url(string $url): string
     {
-        $domain_name = config('transfer.sandbox', true)
+        $domain_name = config('extended_slickpay.sandbox', true)
             ? "devapi.slick-pay.com"
             : "prodapi.slick-pay.com";
 
@@ -335,7 +335,7 @@ class Core
      */
     public static function validate(): array|null
     {
-        $public_key = config('slickpay.public_key', null);
+        $public_key = config('extended_slickpay.public_key', null);
 
         if (empty(trim($public_key))) return [
             'status' => 402,

@@ -1,8 +1,8 @@
 <?php
 
-namespace ExtendedSlickPay\Merchant;
+namespace SlickPay\Merchant;
 
-use ExtendedSlickPay\Core;
+use SlickPay\Core;
 
 /**
  * Invoice

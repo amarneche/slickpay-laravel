@@ -1,8 +1,8 @@
 <?php
 
-namespace ExtendedSlickPay\User;
+namespace SlickPay\User;
 
-use ExtendedSlickPay\Core;
+use SlickPay\Core;
 
 /**
  * Transfer

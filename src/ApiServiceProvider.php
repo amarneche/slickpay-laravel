@@ -1,6 +1,6 @@
 <?php
 
-namespace ExtendedSlickPay;
+namespace SlickPay;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -10,7 +10,7 @@ class ApiServiceProvider extends ServiceProvider
     {
         $this->publishes([
             __DIR__ . '/../config/extended_slickpay.php' => config_path('extended_slickpay.php'),
-        ], 'extendedslickpay-config');
+        ], 'SlickPay-config');
     }
 
     public function register()

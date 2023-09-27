@@ -20,7 +20,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "ExtendedSlickPay\\": "src/"
+            "SlickPay\\": "src/"
         }
     },
     "require": {
@@ -29,7 +29,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "ExtendedSlickPay\\ApiServiceProvider"
+                "SlickPay\\ApiServiceProvider"
             ]
         }
     },

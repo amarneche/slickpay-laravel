@@ -2,7 +2,7 @@
 
 namespace ExtendedSlickPay\Merchant;
 
-use SlickPay\Core;
+use ExtendedSlickPay\Core;
 
 /**
  * Invoice

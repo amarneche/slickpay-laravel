@@ -2,7 +2,7 @@
 
 namespace ExtendedSlickPay\User;
 
-use SlickPay\Core;
+use ExtendedSlickPay\Core;
 
 /**
  * Aggregation

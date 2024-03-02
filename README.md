@@ -25,7 +25,7 @@ Laravel package for [Slick-Pay](https://slick-pay.com) API implementation.
 Just run this command line :
 
 ```sh
-composer require slick-pay-algeria/slickpay-laravel
+composer require amarneche/slickpay-laravel
 ```
 
 ## Configuration
@@ -33,17 +33,17 @@ composer require slick-pay-algeria/slickpay-laravel
 First of all, you have to publish the pakage config file with the command line :
 
 ```sh
-php artisan vendor:publish --tag=slickpay-config
+php artisan vendor:publish --tag=SlickPay-config
 ```
 
-Now, you can find a file **slickpay.php** within your project **config** folder.
+Now, you can find a file **extended_slickpay.php** within your project **config** folder.
 
 ```php
 <?php
 
 return [
     'sandbox'    => true,
-    'public_key' => "",
+    'public_key' => env('SLICKPAY_KEY' ,''),
 ];
 ```
 
